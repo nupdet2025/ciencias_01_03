@@ -1,0 +1,12 @@
+{
+  "name": "ciencias_01_03",
+  "short_name": "ciencias_01_03",
+  "id": "com.example.gamename",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
