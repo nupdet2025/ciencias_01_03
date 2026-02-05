@@ -18,6 +18,9 @@ gdjs.intro2Code.GDplayObjects3= [];
 gdjs.intro2Code.GDfadeObjects1= [];
 gdjs.intro2Code.GDfadeObjects2= [];
 gdjs.intro2Code.GDfadeObjects3= [];
+gdjs.intro2Code.GDbtn_9595replayObjects1= [];
+gdjs.intro2Code.GDbtn_9595replayObjects2= [];
+gdjs.intro2Code.GDbtn_9595replayObjects3= [];
 
 
 gdjs.intro2Code.eventsList0 = function(runtimeScene) {
@@ -55,7 +58,7 @@ if (isConditionTrue_0) {
 
 };gdjs.intro2Code.mapOfGDgdjs_9546intro2Code_9546GDbtn_95959595backObjects1Objects = Hashtable.newFrom({"btn_back": gdjs.intro2Code.GDbtn_9595backObjects1});
 gdjs.intro2Code.mapOfGDgdjs_9546intro2Code_9546GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.intro2Code.GDplayObjects1});
-gdjs.intro2Code.asyncCallback12781548 = function (runtimeScene, asyncObjectsList) {
+gdjs.intro2Code.asyncCallback19790556 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.intro2Code.localVariables);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(2);
 }{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "main1", false);
@@ -70,7 +73,7 @@ gdjs.intro2Code.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.intro2Code.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.intro2Code.asyncCallback12781548(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.intro2Code.asyncCallback19790556(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -95,6 +98,7 @@ gdjs.copyArray(runtimeScene.getObjects("fade"), gdjs.intro2Code.GDfadeObjects1);
     gdjs.intro2Code.GDfadeObjects1[i].getBehavior("Tween").addObjectOpacityTween2("fadeout", 0, "linear", 0.4, true);
 }
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(1);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_02.mp3", 2, false, 100, 1);
 }
 { //Subevents
 gdjs.intro2Code.eventsList0(runtimeScene);} //End of subevents
@@ -157,10 +161,43 @@ isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Lef
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 2, 0, 0.5);
 }{gdjs.evtTools.sound.fadeMusicVolume(runtimeScene, 1, 0, 0.5);
 }
 { //Subevents
 gdjs.intro2Code.eventsList1(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("btn_replay"), gdjs.intro2Code.GDbtn_9595replayObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.intro2Code.GDbtn_9595replayObjects1.length;i<l;++i) {
+    if ( gdjs.intro2Code.GDbtn_9595replayObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.intro2Code.GDbtn_9595replayObjects1[k] = gdjs.intro2Code.GDbtn_9595replayObjects1[i];
+        ++k;
+    }
+}
+gdjs.intro2Code.GDbtn_9595replayObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.stopSoundOnChannel(runtimeScene, 2);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_02.mp3", 2, false, 100, 1);
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
 }
 
 }
@@ -189,6 +226,9 @@ gdjs.intro2Code.GDplayObjects3.length = 0;
 gdjs.intro2Code.GDfadeObjects1.length = 0;
 gdjs.intro2Code.GDfadeObjects2.length = 0;
 gdjs.intro2Code.GDfadeObjects3.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects1.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects2.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects3.length = 0;
 
 gdjs.intro2Code.eventsList2(runtimeScene);
 gdjs.intro2Code.GDback1Objects1.length = 0;
@@ -209,6 +249,9 @@ gdjs.intro2Code.GDplayObjects3.length = 0;
 gdjs.intro2Code.GDfadeObjects1.length = 0;
 gdjs.intro2Code.GDfadeObjects2.length = 0;
 gdjs.intro2Code.GDfadeObjects3.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects1.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects2.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects3.length = 0;
 
 
 return;

@@ -57,7 +57,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.finalCode.mapOfGDgdjs_9546finalCode_9546GDyesButtonObjects1Objects = Hashtable.newFrom({"yesButton": gdjs.finalCode.GDyesButtonObjects1});
-gdjs.finalCode.asyncCallback12919788 = function (runtimeScene, asyncObjectsList) {
+gdjs.finalCode.asyncCallback16288892 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.finalCode.localVariables);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(1);
 }{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "intro", false);
@@ -72,7 +72,7 @@ gdjs.finalCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.finalCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.finalCode.asyncCallback12919788(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.finalCode.asyncCallback16288892(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -137,7 +137,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12919436);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16288108);
 }
 }
 }
