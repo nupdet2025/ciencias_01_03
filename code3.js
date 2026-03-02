@@ -33,7 +33,7 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber() == 3);
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\victory.mp3", 3, true, 100, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\victory.mp3", 3, true, 20, 1);
 }}
 
 }
@@ -50,14 +50,14 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 1);
 }{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 2);
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(3);
-}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\victory.mp3", 3, true, 100, 1);
+}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\victory.mp3", 3, true, 20, 1);
 }}
 
 }
 
 
 };gdjs.finalCode.mapOfGDgdjs_9546finalCode_9546GDyesButtonObjects1Objects = Hashtable.newFrom({"yesButton": gdjs.finalCode.GDyesButtonObjects1});
-gdjs.finalCode.asyncCallback16288892 = function (runtimeScene, asyncObjectsList) {
+gdjs.finalCode.asyncCallback21203260 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.finalCode.localVariables);
 {runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(1);
 }{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "intro", false);
@@ -72,7 +72,7 @@ gdjs.finalCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.finalCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.finalCode.asyncCallback16288892(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.finalCode.asyncCallback21203260(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -96,6 +96,7 @@ gdjs.copyArray(runtimeScene.getObjects("fade"), gdjs.finalCode.GDfadeObjects1);
 }{for(var i = 0, len = gdjs.finalCode.GDfadeObjects1.length ;i < len;++i) {
     gdjs.finalCode.GDfadeObjects1[i].getBehavior("Tween").addObjectOpacityTween2("fadeout", 0, "linear", 0.4, true);
 }
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_final.mp3", 4, false, 100, 1);
 }
 { //Subevents
 gdjs.finalCode.eventsList0(runtimeScene);} //End of subevents
@@ -137,12 +138,13 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16288108);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(21202580);
 }
 }
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 4, 0, 0.5);
 }{gdjs.evtTools.sound.fadeMusicVolume(runtimeScene, 3, 0, 0.5);
 }
 { //Subevents
